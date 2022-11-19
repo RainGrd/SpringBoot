@@ -1,0 +1,13 @@
+servers:
+#  ipAddress: 192.168.139.101
+  ip_address: 192.168.139.101
+  port: 2345
+  timeout: -1
+  serverTimeOut: 3
+  dataSize: 10
+
+
+datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    user: 666
+

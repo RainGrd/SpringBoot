@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bdqn?serverTimezone=UTC
+    username: root
+    password: drg1224605
+  main:
+    banner-mode: off
+#开启mybatis-plus 日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    banner: false
+#    @TableId(type = IdType.ASSIGN_ID)
+    db-config:
+      id-type: assign_id
+      table-prefix: t_
+      logic-delete-field: delStatus
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+

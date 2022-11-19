@@ -1,0 +1,24 @@
+#debug: true
+logging:
+  level:
+    root: info
+  #    设置日志的模板格式
+  pattern:
+#    console: "%d - %m %n"
+    console: "%d %clr(%5p) --- [%16t] %clr(%-40.40c){red} :  %m %n"
+  #  group:
+#    ebank: debug
+#    ebank: com.bdqn.controller.BookController
+
+#设置日志输出文件
+  file:
+    name: server.log
+  logback:
+    rollingpolicy:
+      max-file-size: 4KB
+      file-name-pattern: server.%d.%i.log
+server:
+  port: 81
+
+
+

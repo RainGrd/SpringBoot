@@ -1,0 +1,16 @@
+cartoon:
+  cat:
+    name: "\u56FE\u591A\u76D6\u6D1B"
+    age: 5
+  mouse:
+    name: "\u6CF0\u83F2"
+    age: 1
+spring:
+  redis:
+    port: 6379
+    host: 192.168.139.101
+  autoconfigure:
+    exclude:
+    - org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
+
+

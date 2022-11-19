@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bdqn?serverTimezone=UTC
+    username: root
+    password: drg1224605
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+
+# 设置mp相关的配置
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: t_
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

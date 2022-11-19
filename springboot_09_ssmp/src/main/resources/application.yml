@@ -1,0 +1,73 @@
+server:
+  port: 81
+#tools:
+#  ip:
+#    cycle: 1
+#    model: "detail"
+#    cycle-reset: true
+spring:
+  # 将所有数字转为 String 类型返回，避免前端数据精度丢失的问题
+  #  jackson:
+  #    generator:
+  #      write-numbers-as-strings: true
+  #配置数据源
+  datasource:
+    url: jdbc:mysql://localhost:3306/bdqn?serverTimezone=UTC
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+    password: drg1224605
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #关闭spring boot的标识
+  main:
+    banner-mode: off
+    allow-circular-references: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+  redis:
+    port: 6379
+    host: 192.168.139.101
+    password: drg1224605
+#  健康指标
+management:
+  info:
+    env:
+      enabled: true
+  #  对外开放
+  endpoint:
+    health:
+      show-details: always
+  # 是否能被看到
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    enabled-by-default: true
+info:
+  appName: @project.artifactId@
+  version: @project.version@
+  company: "湖南"
+  author: itheima
+
+#mybatis-plus配置
+mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #去除表名前缀
+      table-prefix: t_
+      #设置id策略
+      id-type: assign_id
+      #逻辑删除
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+    banner: false
+  #  mapper-locations: classpath:com/bdqn/**mapper/*Mapper.xml
+
+
+
+
+

@@ -1,0 +1,5 @@
+spring:
+  # \u6570\u636E\u6E90
+  data:
+    mongodb:
+      uri: mongodb://localhost/bdqn

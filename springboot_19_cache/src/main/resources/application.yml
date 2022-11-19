@@ -1,0 +1,46 @@
+server:
+  port: 80
+spring:
+  datasource:
+    type: com.mchange.v2.c3p0.ComboPooledDataSource
+    url: jdbc:mysql://localhost:3306/bdqn?serverTimezone=UTC
+    username: root
+    password: drg1224605
+#  redis:
+#    host: 192.168.139.101
+#    port: 6379
+#    password: drg1224605
+  cache:
+    type: redis
+    redis:
+      # 是否打开键前缀
+      use-key-prefix: false
+      # 是否缓存空值
+      cache-null-values: false
+      # 设置键前缀
+      key-prefix: sms_
+      # 设置生命周期
+      time-to-live: 10s
+
+
+
+#  ehcache
+#    type: ehcache
+#    ehcache:
+#      config: ehcache.xml
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: t_
+      id-type: assign_id
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+XMemcachedProperties:
+  servers: localhost:11211
+  poolSize: 10
+  opTimeOut: 3000

@@ -1,0 +1,12 @@
+#spring:
+#  profiles:
+#    active: dev
+#    include: mvc,devDB
+
+
+spring:
+  profiles:
+    active: @profiles.active@
+    group:
+      "dev": mvc,devDB
+      "pro": promvc,devDB

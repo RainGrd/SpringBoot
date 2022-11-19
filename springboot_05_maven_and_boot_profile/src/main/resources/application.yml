@@ -1,0 +1,31 @@
+#\u8BBE\u7F6E\u542F\u7528\u7684\u73AF\u5883
+spring:
+  profiles:
+    active: ${profile.active}
+---
+#\u5F00\u53D1
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 80
+---
+#\u751F\u4EA7
+spring:
+  config:
+    activate:
+      on-profile: pro
+server:
+  port: 81
+
+---
+#\u6D4B\u8BD5
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 82
+
+---

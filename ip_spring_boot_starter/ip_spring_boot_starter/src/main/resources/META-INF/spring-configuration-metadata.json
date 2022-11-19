@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "name": "tools.ip",
+      "type": "com.bdqn.properties.IpProperties",
+      "sourceType": "com.bdqn.properties.IpProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tools.ip.cycle",
+      "type": "java.lang.Long",
+      "description": "日志的显示周期",
+      "sourceType": "com.bdqn.properties.IpProperties"
+    },
+    {
+      "name": "tools.ip.cycle-reset",
+      "type": "java.lang.Boolean",
+      "description": "是否周期内清空数据，默认不清楚",
+      "sourceType": "com.bdqn.properties.IpProperties"
+    },
+    {
+      "name": "tools.ip.model",
+      "type": "java.lang.String",
+      "description": "日志的输出模式 detail：详细模式，simple:极简模式",
+      "sourceType": "com.bdqn.properties.IpProperties"
+    }
+  ],
+  "hints": [
+    {
+      "name":"tools.ip.model",
+      "values":[
+        {
+          "value":"detail",
+          "descript":"详细模式."
+        },
+        {
+          "value":"simple",
+          "descript":"简单模式."
+        }
+      ]
+    }
+  ]
+}

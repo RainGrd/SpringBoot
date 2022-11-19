@@ -1,0 +1,13 @@
+lesson: SpringBoot
+
+server:
+  port: 80
+
+enterprise:
+  name: bdqn
+  age: 16
+  tel: 15873461176
+  subject:
+    - java
+    - 前端
+    - 大数据

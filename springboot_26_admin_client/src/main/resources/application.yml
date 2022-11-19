@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+#  \u5065\u5EB7\u6307\u6807
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
